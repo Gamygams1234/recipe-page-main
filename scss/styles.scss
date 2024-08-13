@@ -364,6 +364,13 @@ main {
     .container {
       border-radius: 2rem;
       overflow: hidden;
+      max-width: 700px;
+      header{
+        padding-top: 1.5rem;
+        img{
+            border-radius: 1rem;
+        }
+      }
     }
   }
 }

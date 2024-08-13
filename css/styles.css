@@ -312,5 +312,12 @@ main .container .nutrition .nutrition-body-item {
   main .container {
     border-radius: 2rem;
     overflow: hidden;
+    max-width: 700px;
+  }
+  main .container header {
+    padding-top: 1.5rem;
+  }
+  main .container header img {
+    border-radius: 1rem;
   }
 }
