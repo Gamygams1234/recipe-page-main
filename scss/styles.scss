@@ -1,0 +1,369 @@
+// Import Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+// Define font family variables
+$font-primary: "Outfit", sans-serif;
+$font-secondary: "Young Serif", serif;
+
+// Margin bottom sizes in em
+$mb-1: 0.25em; // equivalent to 4px when the font-size is 16px
+$mb-2: 0.5em; // equivalent to 8px when the font-size is 16px
+$mb-3: 1em; // equivalent to 16px when the font-size is 16px
+$mb-4: 1.5em; // equivalent to 24px when the font-size is 16px
+$mb-5: 2em; // equivalent to 32px when the font-size is 16px
+$mb-6: 2.5em; // equivalent to 40px when the font-size is 16px
+$mb-7: 3em; // equivalent to 48px when the font-size is 16px
+$mb-8: 4em; // equivalent to 64px when the font-size is 16px
+
+// Use the variables in your styles
+body {
+  font-family: $font-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+}
+// font weight
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+// Margin bottom utilities using em
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: $mb-1;
+}
+
+.mb-2 {
+  margin-bottom: $mb-2;
+}
+
+.mb-3 {
+  margin-bottom: $mb-3;
+}
+
+.mb-4 {
+  margin-bottom: $mb-4;
+}
+
+.mb-5 {
+  margin-bottom: $mb-5;
+}
+
+.mb-6 {
+  margin-bottom: $mb-6;
+}
+
+.mb-7 {
+  margin-bottom: $mb-7;
+}
+
+.mb-8 {
+  margin-bottom: $mb-8;
+}
+
+// Color Variables
+$white: hsl(0, 0%, 100%);
+
+$stone-100: hsl(30, 54%, 90%);
+$stone-150: hsl(30, 18%, 87%);
+$stone-600: hsl(30, 10%, 34%);
+$stone-900: hsl(24, 5%, 18%);
+
+$brown-800: hsl(14, 45%, 36%);
+
+$rose-800: hsl(332, 51%, 32%);
+$rose-50: hsl(330, 100%, 98%);
+
+// Background Color Utilities
+.bg-white {
+  background-color: $white;
+}
+
+.bg-stone-100 {
+  background-color: $stone-100;
+}
+
+.bg-stone-150 {
+  background-color: $stone-150;
+}
+
+.bg-stone-600 {
+  background-color: $stone-600;
+}
+
+.bg-stone-900 {
+  background-color: $stone-900;
+}
+
+.bg-brown-800 {
+  background-color: $brown-800;
+}
+
+.bg-rose-800 {
+  background-color: $rose-800;
+}
+
+.bg-rose-50 {
+  background-color: $rose-50;
+}
+hr{
+    width: calc(100% - 3rem);
+    border-top: 1px solid $stone-150;
+}
+// Text Color Utilities
+.text-white {
+  color: $white;
+}
+
+.text-stone-100 {
+  color: $stone-100;
+}
+
+.text-stone-150 {
+  color: $stone-150;
+}
+
+.text-stone-600 {
+  color: $stone-600;
+}
+
+.text-stone-900 {
+  color: $stone-900;
+}
+
+.text-brown-800 {
+  color: $brown-800;
+}
+
+.text-rose-800 {
+  color: $rose-800;
+}
+
+.text-rose-50 {
+  color: $rose-50;
+}
+
+.padding-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+main {
+  background-color: $stone-100;
+
+  .container {
+    background-color: $white;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 100%;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        line-height: 1.5;
+      }
+    }
+
+    .preparation-time {
+      .content {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        h2 {
+          font-family: $font-primary;
+          font-size: 1.25rem;
+        }
+
+        .prep-list {
+          list-style-type: none; // Remove default bullets
+          padding: 0;
+
+          li {
+            margin-bottom: 0.75em; // Space between list items
+
+            &::before {
+              content: "•"; // Custom bullet symbol
+              color: $rose-800; // Use your color variable for the bullet
+              font-weight: bold;
+              margin-right: 1em; // Space between bullet and text
+            }
+
+            .prep-label {
+              font-weight: bold; // Bold the label
+              color: $stone-900; // Use a darker color for contrast
+            }
+          }
+        }
+      }
+    }
+    
+
+    .ingredients {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      ul {
+        list-style-type: none; // Remove default bullets
+        padding: 0;
+
+        li {
+          margin-bottom: 0.75em; // Space between list items
+          position: relative;
+
+          line-height: 1.5;
+          margin-left: 1.5em; // Adjust as needed
+          &::before {
+            content: "•"; // Custom bullet symbol
+            color: $brown-800; // Use your color variable for the bullet
+            font-weight: bold;
+            margin-right: 1em; // Space between bullet and text
+            position: absolute;
+            left: -1.25em; // Adjust position based on your layout
+            top: 0;
+          }
+
+          .prep-label {
+            font-weight: bold; // Bold the label
+            color: $stone-900; // Use a darker color for contrast
+          }
+        }
+      }
+    }
+
+    .instructions {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .instructions-list {
+        counter-reset: instruction-counter; // Initialize a counter for the list items
+        list-style: none; // Remove the default list style
+        padding: 0;
+        margin-left: 1.5em; // Adjust as needed
+
+        li {
+          line-height: 1.5;
+          position: relative;
+          margin-bottom: 1.5em; // Space between list items
+          font-family: "Outfit", sans-serif;
+          font-size: 1em;
+          color: $stone-900;
+
+          // Create a custom counter before each list item
+          &::before {
+            counter-increment: instruction-counter;
+            content: counter(instruction-counter) "."; // Display the counter
+            font-weight: 700;
+            font-size: 1em; // Slightly larger for emphasis
+            color: $brown-800; // Match your color scheme
+            position: absolute;
+            left: -1.25em; // Adjust position based on your layout
+            top: 0;
+          }
+
+          strong {
+            font-weight: 600; // Bold the important parts
+            color: $stone-900; // Highlight the key points with the brown color
+          }
+        }
+      }
+    }
+
+    .nutrition {
+      h2 {
+        font-size: 1.5rem;
+      }
+      p{
+        line-height: 1.5;
+      }
+
+      .nutrition-grid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        .group {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); // Four columns, one for each nutritional element
+          gap: 0.5em; // Space between the items
+          text-align: left; // Center the text in each grid item
+          margin-top: 1em; // Space from top
+        }
+        .group:not(:last-child) {
+          padding-bottom: 1em; // Space below each group except the last one
+
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1); // Faint 1px line
+        }
+      }
+
+      .nutrition-header-item {
+        padding: 0.5em 0 0 3rem; // Padding inside each header item
+      }
+
+      .nutrition-body-item {
+        padding: 0.5em 0 0 3rem; // Padding inside each body item
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  main {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    .container {
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+  }
+}
